@@ -1,0 +1,79 @@
+ /* Estilos para a seção hero */
+ .hero {
+    /* background-color: #f2f2f2; */
+    background: linear-gradient(to bottom, black, darkblue);
+    text-align: center;
+    padding: 80px 0;
+    height: 100vh;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: default;
+  }
+
+  .hero-subtitle {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #b6b2b2;
+    padding-bottom: 2rem;
+    cursor: default;
+  }
+  
+  .hero img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #666;
+  }
+  
+  .icon {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #333;
+  }
+  
+  .icon i {
+    margin-right: 10px;
+  }
+  
+  .icon:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .icon:hover i {
+    color: #fff;
+  }

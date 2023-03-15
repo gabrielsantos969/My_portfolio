@@ -9,21 +9,59 @@
         <h2 class="hero-subtitle">Software Developer</h2>
         <img src="https://github.com/gabrielsantos969.png" alt="Imagem">
         <div class="button-group">
-            <a href="#" class="button">Portfolio</a>
+            <a href="{% url 'about-me' %}" class="button">About me</a>
             <a href="{% static 'my_portfolio/pdf/Gabriel Santos.pdf' %}" download class="icon" >Download PDF</a>
         </div>
     </div>
 </section>
-  
-<section id="about">
-    <h2>Sobre</h2>
-    <p>Um pouco sobre mim.</p>
-</section>
 
-<section id="experience" style="padding-bottom: 1000px;">
-<h2>Experiências</h2>
-<p>Algumas das minhas experiências profissionais e acadêmicas.</p>
-</section>
+<section id="experience" class="card-section">
+    <h2>Experiences</h2>
+    <div class="card-wrapper">
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/pitao.png' %}" alt="python">
+            <h3>Python</h3>
+            <h4>Experience: 2+ years</h4>
+            <p>Descrição do projeto 1.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/typescript.png' %}" alt="typescript">
+            <h3>TypeScript</h3>
+            <h4>Experience: 2+ years</h4>
+            <p>Descrição do projeto 2.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/java.png' %}" alt="java">
+            <h3>Java</h3>
+            <h4>Experience: 1+ years</h4>
+            <p>Descrição do projeto 3.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/js.png' %}" alt="javascript">
+            <h3>JavaScript</h3>
+            <h4>Experience: 2+ years</h4>
+            <p>Descrição do projeto 4.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/react.png' %}" alt="react">
+            <h3>React</h3>
+            <h4>Experience: 1+ years</h4>
+            <p>Descrição do projeto 5.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/html-5.png' %}" alt="html-5">
+            <h3>HTML5</h3>
+            <h4>Experience: 2+ years</h4>
+            <p>Descrição do projeto 6.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/css-3.png' %}" alt="css-3">
+            <h3>CSS3</h3>
+            <h4>Experience: 2+ years</h4>
+            <p>Descrição do projeto 6.</p>
+        </div>
+    </div>
+  </section>
   
   
   
