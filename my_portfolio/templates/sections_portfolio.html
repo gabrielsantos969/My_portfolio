@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %} 
+
+<section id="home" class="hero">
+    <div class="container">
+        <h1 class="hero-title">Gabriel Santos Da Silva</h1>
+        <h2 class="hero-subtitle">Software Developer</h2>
+        <img src="https://github.com/gabrielsantos969.png" alt="Imagem">
+        <div class="button-group">
+            <a href="#" class="button">Portfolio</a>
+            <a href="{% static 'my_portfolio/pdf/Gabriel Santos.pdf' %}" download class="icon" >Download PDF</a>
+        </div>
+    </div>
+</section>
+  
+<section id="about">
+    <h2>Sobre</h2>
+    <p>Um pouco sobre mim.</p>
+</section>
+
+<section id="experience" style="padding-bottom: 1000px;">
+<h2>Experiências</h2>
+<p>Algumas das minhas experiências profissionais e acadêmicas.</p>
+</section>
+  
+  
+  
+<section id="contacts" style="padding-bottom: 1000px;">
+<h2>Contato</h2>
+<p>Entre em contato comigo!</p>
+</section>
+
+{% endblock %}

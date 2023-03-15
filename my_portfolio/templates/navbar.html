@@ -1,0 +1,19 @@
+{% load static %}
+<nav>
+    <div class="navbar-container">
+      <div class="navbar-buttons">
+        <a href="#home" class="btn active" onclick="button_selected(this)">
+          <img src="{% static 'my_portfolio/img/icons/home.png' %}" alt="Botão 1">
+        </a>
+        <a href="#experience" class="btn" onclick="button_selected(this)">
+          <img src="{% static 'my_portfolio/img/icons/experience.png' %}" alt="Botão 2">
+        </a>
+        <a href="#about" class="btn" onclick="button_selected(this)">
+          <img src="{% static 'my_portfolio/img/icons/about.png' %}" alt="Botão 3">
+        </a>
+        <a href="#contacts" class="btn" onclick="button_selected(this)">
+          <img src="{% static 'my_portfolio/img/icons/contact.png' %}" alt="Botão 4">
+        </a>
+      </div>
+    </div>
+  </nav>
