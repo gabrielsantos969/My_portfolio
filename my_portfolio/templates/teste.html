@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Digitando...</title>
+    <style>
+      .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .frase {
+            font-size: 36px;
+            color: #333;
+            margin: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .animar {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-name: aparecer;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+  </head>
+  <body>
+ 
+    <h1>Frases Animadas</h1>
+
+	<div class="container">
+		<div class="frase">Frase 1</div>
+		<div class="frase">Frase 2</div>
+		<div class="frase">Frase 3</div>
+		<div class="frase">Frase 4</div>
+		<div class="frase">Frase 5</div>
+	</div>
+
+   
+    <script>
+        // Array com as frases a serem exibidas
+		const frases = ["Primeira frase", "Segunda frase"];
+
+        // Contador de posição no array
+        let posicao = 0;
+
+        // Função para exibir as frases
+        function exibirFrases() {
+            // Seleciona a div onde as frases serão exibidas
+            const divFrases = document.querySelector("#frases");
+
+            // Verifica se ainda há frases para exibir
+            if (posicao < frases.length) {
+                // Exibe a frase atual na div
+                divFrases.innerHTML = frases[posicao];
+
+                // Incrementa o contador de posição
+                posicao++;
+
+                // Chama a função novamente após 3 segundos
+                setTimeout(exibirFrases, 3000);
+            }
+        }
+
+        // Chama a função para exibir as frases
+        exibirFrases();
+
+        const frases = document.querySelectorAll('.frase');
+
+        let delay = 0;
+
+        frases.forEach((frase) => {
+            setTimeout(() => {
+                frase.classList.add('animar');
+            }, delay);
+
+            delay += 500;
+        });
+        /* setTimeout(function() {
+        window.location.href = "{% url 'about-me' %}";
+        }, 5000); */
+     
+    </script>
+  </body>
+</html>

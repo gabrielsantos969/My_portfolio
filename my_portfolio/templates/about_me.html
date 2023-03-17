@@ -1,5 +1,50 @@
 {% extends 'index.html' %}
-
+{% load static %}
 {% block content %}
-    <h1>About me</h1>
+<link rel="stylesheet" href="{% static 'my_portfolio/css/about-me.css' %}">
+
+<div class="super-content">
+    
+    <div class="back-page">
+        <a class="back-button" href="{% url 'home' %}" >
+            <span class="arrow-left"></span>
+        </a>
+        <h1 class="title">Seja bem vindo</h1>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+          <img src="https://picsum.photos/200/300?random=1" alt="Image 1" class="card-image">
+          <div class="card-info">
+            <h2>Image 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        
+        <div class="image-wrapper">
+          <img src="https://picsum.photos/200/300?random=2" alt="Image 2" class="card-image">
+          <div class="card-info">
+            <h2>Image 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        
+        <div class="image-wrapper">
+          <img src="https://picsum.photos/200/300?random=3" alt="Image 3" class="card-image">
+          <div class="card-info">
+            <h2>Image 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        
+        <div class="image-wrapper">
+          <img src="https://picsum.photos/200/300?random=4" alt="Image 4" class="card-image">
+          <div class="card-info">
+            <h2>Image 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+    </div>
+
+</div>
 {% endblock%}

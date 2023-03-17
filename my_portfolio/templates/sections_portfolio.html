@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block content %} 
-
+<link rel="stylesheet" type="text/css" href="{% static 'my_portfolio/css/card-hero.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'my_portfolio/css/card-experience.css' %}">
 <section id="home" class="hero">
     <div class="container">
         <h1 class="hero-title">Gabriel Santos Da Silva</h1>
@@ -60,14 +61,14 @@
             <h4>Experience: 2+ years</h4>
             <p>Descrição do projeto 6.</p>
         </div>
+        <div class="card">
+            <img src="{% static 'my_portfolio/img/sql.png' %}" alt="sql">
+            <h3>SQL</h3>
+            <h4>Experience: 2+ years</h4>
+            <p>Descrição do projeto 6.</p>
+        </div>
     </div>
   </section>
   
-  
-  
-<section id="contacts" style="padding-bottom: 1000px;">
-<h2>Contato</h2>
-<p>Entre em contato comigo!</p>
-</section>
 
 {% endblock %}
