@@ -1,6 +1,6 @@
 footer {
   background-color: #F5F5F5;
-  color: #333;
+  
   padding: 20px;
   text-align: center;
 }
@@ -22,6 +22,16 @@ footer {
 .footer-content {
   max-width: 500px;
   margin-top: 20px;
+}
+
+
+.title-footer {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #8a8989;
+    padding-bottom: 2rem;
+    cursor: default;
 }
 
 .button-group-footer {

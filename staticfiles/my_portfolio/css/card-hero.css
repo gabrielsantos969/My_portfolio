@@ -1,54 +1,85 @@
-.intro {
+ /* Estilos para a seção hero */
+ .hero {
+    /* background-color: #f2f2f2; */
+    background: linear-gradient(to bottom, black, darkblue);
+    text-align: center;
+    padding: 80px 0;
+    height: 100vh;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: default;
+  }
+
+  .hero-subtitle {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #b6b2b2;
+    padding-bottom: 2rem;
+    cursor: default;
+  }
+  
+  .hero img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+  }
+  
+  .button-group {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #f8f8f8;
+    justify-content: center;
   }
   
-  .image {
-    float: right;
-    width: 40%;
-    height: 0;
-    padding-bottom: 40%;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  
-  .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .text {
-    width: 55%;
-  }
-  
-  .text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .text p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  }
-  
-  .btn-download {
+  .button {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: #007bff;
+    background-color: #333;
     color: #fff;
-    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
   }
   
-  .btn-download:hover {
-    background-color: #0062cc;
+  .button:hover {
+    background-color: #666;
+  }
+  
+  .icon {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #333;
+  }
+  
+  .icon i {
+    margin-right: 10px;
+  }
+  
+  .icon:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .icon:hover i {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .hero{
+      height: auto;
+    }
   }

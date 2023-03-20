@@ -17,14 +17,18 @@
     align-items: center;
     justify-content: center;
     max-width: 100%;
+    width: 100%;
     height: 12vh;
   }
+
+
 
   .title {
     flex-grow: 1;
     text-align: center;
     font-size: 24px;
     padding: 12px;
+
   }
   
   .arrow-left {
@@ -91,18 +95,42 @@
   .image-wrapper:hover {
     transform: translateY(-10px);
   }
-  
-  @media (max-width: 768px) {
 
-    .back-button {
-        flex-direction: column;
-        text-align: center;
-        width: 40px;
-        height: 40px;
-    }
+
+.card-about-me {
+  background-color: rgb(145, 145, 158);
+  padding: 1rem;
+  margin: 2rem 20rem 2rem 20rem;
+  border-bottom: 5px solid rgba(185, 185, 185, 0.6);
+  border-right: 5px solid rgba(185, 185, 185, 0.6);
+  border-radius: 0 0 10px 0;
+  box-shadow: 10px 5px 5px rgba(49, 49, 49, 0.5);
+}
+
+.card-about-me h2{
+  cursor: default;
+}
+.card-about-me p{
+  text-align: justify;
+  padding-top: 12px;
+  cursor: default;
+}
+  
+@media (max-width: 768px) {
+
+  .back-button {
+      flex-direction: column;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+  }
     
 
-    .image-wrapper {
-      flex-basis: calc(50% - 40px);
-    }
+  .image-wrapper {
+    flex-basis: calc(50% - 40px);
   }
+
+  .card-about-me{
+    margin: 1rem 5rem 1rem 5rem;
+  }
+}
