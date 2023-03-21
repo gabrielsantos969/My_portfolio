@@ -6,3 +6,5 @@ def index(request):
 def about(request):
     return render(request, 'about_me.html', {})
 
+def certifications(request):
+    return render(request, 'certifications.html', {})

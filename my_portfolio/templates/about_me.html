@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'my_portfolio/css/about-me.css' %}">
+<link rel="stylesheet" href="{% static 'my_portfolio/css/geral.css' %}">
 
 <div class="super-content">
     
@@ -16,7 +17,7 @@
   <!-- Aqui fica os cards com os videos -->
   <div class="card"> 
     <div class="image-wrapper">
-      <video s autoplay muted class="card-image">
+      <video loop autoplay muted class="card-image">
         <source src="{% static 'my_portfolio/img/videos/programando.mp4' %}" type="video/mp4">
       </video>
       <div class="card-info">

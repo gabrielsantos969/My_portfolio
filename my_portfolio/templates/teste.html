@@ -1,99 +1,133 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Digitando...</title>
+    <meta charset="UTF-8">
+    <title>Certificado</title>
     <style>
-      .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      /* Estilo para a seção do certificado */
+      .certificate {
+        height: 100vh; /* altura da seção */
+        background-image: url("https://www.example.com/certificate.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      
+      /* Estilo para a tela que aparecerá quando a imagem for clicada */
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      /* Estilo para a imagem em tela cheia */
+      #overlay img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+
+      #pitao {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      /* Estilo para a imagem em tela cheia */
+      #pitao img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+      
+      /* Estilo para o botão de fechar a tela */
+      #close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      /* Media queries para tornar a página responsiva */
+      @media screen and (max-width: 768px) {
+        /* Estilo para a seção do certificado em dispositivos móveis */
+        .certificate {
+          height: 50vh;
+        }
+        
+        /* Estilo para a imagem em tela cheia em dispositivos móveis */
+        #overlay img {
+          max-width: 90%;
+          max-height: 90%;
         }
 
-        .frase {
-            font-size: 36px;
-            color: #333;
-            margin: 20px;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+        #pitao img {
+          max-width: 90%;
+          max-height: 90%;
         }
-
-        .animar {
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            animation-iteration-count: infinite;
-            animation-name: aparecer;
-        }
-
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+      }
     </style>
   </head>
   <body>
- 
-    <h1>Frases Animadas</h1>
+    <!-- Seção do certificado -->
+    <section class="certificate" onclick="showOverlay()">
+      <h1>Clique na imagem para ampliar</h1>
+    </section>
 
-	<div class="container">
-		<div class="frase">Frase 1</div>
-		<div class="frase">Frase 2</div>
-		<div class="frase">Frase 3</div>
-		<div class="frase">Frase 4</div>
-		<div class="frase">Frase 5</div>
-	</div>
+    <section class="certificate" onclick="showPitao()">
+        <h1>Clique na imagem para 2</h1>
+      </section>
+    
+    <!-- Tela que aparecerá quando a imagem for clicada -->
+    <div id="overlay" onclick="hideOverlay()">
+      <span id="close-button">&times;</span>
+      <img src="{% static 'my_portfolio/img/java.png'%}" alt="Certificado">
+    </div>
 
-   
+    <div id="pitao" onclick="hidePitao()">
+        <span id="close-button">&times;</span>
+        <img src="{% static 'my_portfolio/img/pitao.png'%}" alt="Certificado">
+      </div>
+    
+    <!-- Script para mostrar e esconder a tela em overlay -->
     <script>
-        // Array com as frases a serem exibidas
-		const frases = ["Primeira frase", "Segunda frase"];
+      function showOverlay() {
+        document.getElementById("overlay").style.display = "flex";
+      }
+      
+      function hideOverlay() {
+        document.getElementById("overlay").style.display = "none";
+      }
 
-        // Contador de posição no array
-        let posicao = 0;
-
-        // Função para exibir as frases
-        function exibirFrases() {
-            // Seleciona a div onde as frases serão exibidas
-            const divFrases = document.querySelector("#frases");
-
-            // Verifica se ainda há frases para exibir
-            if (posicao < frases.length) {
-                // Exibe a frase atual na div
-                divFrases.innerHTML = frases[posicao];
-
-                // Incrementa o contador de posição
-                posicao++;
-
-                // Chama a função novamente após 3 segundos
-                setTimeout(exibirFrases, 3000);
-            }
-        }
-
-        // Chama a função para exibir as frases
-        exibirFrases();
-
-        const frases = document.querySelectorAll('.frase');
-
-        let delay = 0;
-
-        frases.forEach((frase) => {
-            setTimeout(() => {
-                frase.classList.add('animar');
-            }, delay);
-
-            delay += 500;
-        });
-        /* setTimeout(function() {
-        window.location.href = "{% url 'about-me' %}";
-        }, 5000); */
-     
+      function showPitao() {
+        document.getElementById("pitao").style.display = "flex";
+      }
+      
+      function hidePitao() {
+        document.getElementById("pitao").style.display = "none";
+      }
     </script>
   </body>
 </html>
