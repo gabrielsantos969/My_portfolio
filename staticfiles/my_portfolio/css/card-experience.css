@@ -5,11 +5,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(to bottom,darkblue, black);
   }
 
   .card-section h2{
     margin-top: 1rem;
     font-size: 3rem;
+    color: #fff;
     cursor: default;
   }
   
@@ -19,14 +21,22 @@
     justify-content: space-around;
   }
   
+  
   .card {
     width: calc(25% - 60px); /* subtrai a margem e o padding para calcular a largura do card */
     margin: 30px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    box-shadow: 0px 0px 20px rgba(170, 170, 170, 0.856);
     border-radius: 10px;
     text-align: center;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .card:hover{
+    box-shadow: 0px 0px 20px rgba(233, 233, 233, 0.856);
+    transform: scale(1.03);
   }
   
   .card img {
@@ -38,20 +48,17 @@
   .card h3 {
     margin-top: 20px;
     font-size: 24px;
-    cursor: default;
   }
   
   .card h4 {
     margin-top: 10px;
     font-size: 18px;
-    cursor: default;
 
   }
   
   .card p {
     margin-top: 10px;
     font-size: 14px;
-    cursor: default;
 
   }
 

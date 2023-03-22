@@ -8,3 +8,6 @@ def about(request):
 
 def certifications(request):
     return render(request, 'certifications.html', {})
+
+def handler404(request, exception):
+    return render(request, 'exeptions/404.html')

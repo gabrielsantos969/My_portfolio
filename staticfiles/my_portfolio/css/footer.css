@@ -1,10 +1,9 @@
 footer {
-  background-color: #F5F5F5;
-  
+  background: linear-gradient(to bottom, rgb(0, 0, 50), rgb(100, 100, 100));
   padding: 20px;
   text-align: center;
 }
-
+ 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +21,10 @@ footer {
 .footer-content {
   max-width: 500px;
   margin-top: 20px;
+}
+
+.footer-content p {
+  color: white;
 }
 
 
@@ -49,7 +52,6 @@ footer {
 
 .button-group-footer a img{
   height: 38px;
-
   border-radius: 50%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
