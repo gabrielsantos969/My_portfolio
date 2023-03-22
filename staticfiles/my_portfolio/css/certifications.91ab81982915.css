@@ -1,0 +1,57 @@
+body{
+  background: linear-gradient(to bottom, rgb(100, 100, 100), rgb(0, 0, 50))
+}
+
+.super-certification {
+  text-align: center;
+  color: #fff;
+}
+
+.content-certification {
+  height: 100vh;
+}
+
+.galery-certifications{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.certification-wrapper {
+  position: relative;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certification-image {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.certification-wrapper:hover .card-info {
+  opacity: 1;
+}
+
+.certification-wrapper:hover {
+  transform: translateY(-10px);
+}
+

@@ -1,0 +1,36 @@
+/* Estilo para o botão de fechar a tela */
+#close-button {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 24px;
+color: white;
+cursor: pointer;
+}
+
+/* Style for img in certifications-alter */
+.img-certifications-max {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.active {
+    display: flex;
+}
+
+.desactive {
+    display: none;
+}
+
+.style-alter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+
