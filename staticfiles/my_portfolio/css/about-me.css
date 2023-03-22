@@ -103,7 +103,10 @@ body{
     flex-basis: calc(50% - 40px);
   }
 
-  .card-about-me{
+  .super-card-about {
     margin: 1rem 5rem 1rem 5rem;
+    flex-basis: calc(50% - 40px);
   }
+
+
 }
