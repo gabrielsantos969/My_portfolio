@@ -3,6 +3,7 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'my_portfolio/css/certifications.css' %}">
+<link rel="stylesheet" href="{% static 'my_portfolio/css/certifications-alter.css' %}">
 <link rel="stylesheet" href="{% static 'my_portfolio/css/geral.css' %}">
 
 <div class="super-certification">
@@ -17,13 +18,13 @@
         <section id="python" class="content-certification">
             <h1>Python</h1>
             <div class="galery-certifications" id="python-cert">
-                <div class="certification-wrapper">
+                <div class="certification-wrapper" onclick="showPy1()">
                     <img class="certification-image" src="{% static 'my_portfolio/img/certifications/UC-2b2be842-5000-4098-909e-8378947f1098.jpg' %}" alt="Programação Web com Python e Django Framework: Essencial">
                     <div class="card-info">
                         <h4>Programação Web com Python e Django Framework: Essencial</h4>
                     </div>
                 </div>
-                <div class="certification-wrapper">
+                <div class="certification-wrapper" onclick="showPy2()">
                     <img class="certification-image" src="{% static 'my_portfolio/img/certifications/GabrielSantos-PCAP - Programmi-certificate_page-0001.jpg' %}" alt="PCAP: Programming Essentials in Python">
                     <div class="card-info">
                         <h4>PCAP: Programming Essentials in Python</h4>
@@ -34,7 +35,7 @@
         <section id="typescript" class="content-certification">
             <h1>TypeScript</h1>
             <div class="galery-certifications">
-                <div class="certification-wrapper">
+                <div class="certification-wrapper" onclick="showTs1()">
                     <img class="certification-image" src="{% static 'my_portfolio/img/certifications/UC-334e8577-dfa3-4f03-8f09-cc94a8dc7e8e.jpg' %}" alt="Entendendo TypeScript">
                     <div class="card-info">
                       <h4>Entendendo TypeScript</h4>
@@ -44,9 +45,9 @@
         </section>
         <section id="java" class="content-certification">
             <h1>Java</h1>
-            <div class="galery-certifications">
-                <div class="certification-wrapper">
-                    <img class="certification-image" src="{% static 'my_portfolio/img/study.jpg' %}" alt="nome certificado">
+            <div class="galery-certifications" >
+                <div class="certification-wrapper" onclick="showStudy()">
+                    <img class="certification-image"  src="{% static 'my_portfolio/img/study.jpg' %}" alt="study">
                     <div class="card-info">
                       <h4>Gaining knowledge...</h4>
                     </div>
@@ -55,9 +56,9 @@
         </section>
         <section id="javascript" class="content-certification">
             <h1>JavaScript</h1>
-            <div class="galery-certifications">
-                <div class="certification-wrapper">
-                    <img class="certification-image" src="{% static 'my_portfolio/img/study.jpg' %}" alt="nome certificado">
+            <div class="galery-certifications" >
+                <div class="certification-wrapper" onclick="showStudy()">
+                    <img class="certification-image"  src="{% static 'my_portfolio/img/study.jpg' %}" alt="study">
                     <div class="card-info">
                       <h4>Gaining knowledge...</h4>
                     </div>
@@ -66,9 +67,9 @@
         </section>
         <section id="react" class="content-certification">
             <h1>React</h1>
-            <div class="galery-certifications">
-                <div class="certification-wrapper">
-                    <img class="certification-image" src="{% static 'my_portfolio/img/study.jpg' %}" alt="nome certificado">
+            <div class="galery-certifications" >
+                <div class="certification-wrapper" onclick="showStudy()">
+                    <img class="certification-image"  src="{% static 'my_portfolio/img/study.jpg' %}" alt="study">
                     <div class="card-info">
                       <h4>Gaining knowledge...</h4>
                     </div>
@@ -77,9 +78,9 @@
         </section>
         <section id="html" class="content-certification">
             <h1>HTML</h1>
-            <div class="galery-certifications">
-                <div class="certification-wrapper">
-                    <img class="certification-image" src="{% static 'my_portfolio/img/study.jpg' %}" alt="nome certificado">
+            <div class="galery-certifications" >
+                <div class="certification-wrapper" onclick="showStudy()">
+                    <img class="certification-image"  src="{% static 'my_portfolio/img/study.jpg' %}" alt="study">
                     <div class="card-info">
                       <h4>Gaining knowledge...</h4>
                     </div>
@@ -88,9 +89,9 @@
         </section>
         <section id="css" class="content-certification">
             <h1>CSS</h1>
-            <div class="galery-certifications">
-                <div class="certification-wrapper">
-                    <img class="certification-image" src="{% static 'my_portfolio/img/study.jpg' %}" alt="nome certificado">
+            <div class="galery-certifications" >
+                <div class="certification-wrapper" onclick="showStudy()">
+                    <img class="certification-image"  src="{% static 'my_portfolio/img/study.jpg' %}" alt="study">
                     <div class="card-info">
                       <h4>Gaining knowledge...</h4>
                     </div>
@@ -100,8 +101,8 @@
         <section id="sql" class="content-certification">
             <h1>SQL</h1>
             <div class="galery-certifications">
-                <div class="certification-wrapper">
-                    <img class="certification-image" src="{% static 'my_portfolio/img/study.jpg' %}" alt="nome certificado">
+                <div class="certification-wrapper" onclick="showStudy()">
+                    <img class="certification-image"  src="{% static 'my_portfolio/img/study.jpg' %}" alt="study">
                     <div class="card-info">
                       <h4>Gaining knowledge...</h4>
                     </div>
@@ -110,6 +111,9 @@
         </section>
     </div>
 </div>
-
+<!-- html que fica os divs com tela aumentada de certificados -->
+{% include 'certifications-alter.html' %}
+<!-- Script para aumentar as imagens -->
+<script src="{% static 'my_portfolio/js/certifications-alter.js' %}"></script>
 
 {% endblock %}
