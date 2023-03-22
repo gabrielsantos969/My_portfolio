@@ -1,6 +1,8 @@
 {% extends 'index.html' %}
 {% load static %}
-
+{% block title %}
+    {{ title }}
+{% endblock %}
 {% block content %} 
 <link rel="stylesheet" type="text/css" href="{% static 'my_portfolio/css/card-hero.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'my_portfolio/css/card-experience.css' %}">

@@ -1,13 +1,25 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'sections_portfolio.html', {})
+    ctx = {
+        'title': 'Home'
+    }
+    return render(request, 'sections_portfolio.html', ctx)
 
 def about(request):
-    return render(request, 'about_me.html', {})
+    ctx = {
+        'title': 'About Me'
+    }
+    return render(request, 'about_me.html', ctx)
 
 def certifications(request):
-    return render(request, 'certifications.html', {})
+    ctx = {
+        'title': 'Certifications'
+    }
+    return render(request, 'certifications.html', ctx)
 
 def handler404(request, exception):
-    return render(request, 'exeptions/404.html')
+    ctx = {
+        'title': '404'
+    }
+    return render(request, 'exeptions/404.html', ctx)
