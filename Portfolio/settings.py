@@ -1,5 +1,9 @@
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,12 +13,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mxg7u5%erop7%=#oci^x$s49my36mr94lbivc=^$mafa*hfwq5'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['gabriel-santos.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = [os.getenv('DOMAIN'), '127.0.0.1']
 
 
 # Application definition
@@ -41,15 +45,15 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'https://gabriel-santos.up.railway.app',
+    'https://' + os.getenv('DOMAIN'),
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://gabriel-santos.up.railway.app'
+    'https://' + os.getenv('DOMAIN')
 ]
 
-CSRF_COOKIE_DOMAIN = 'gabriel-santos.up.railway.app'
-SESSION_COOKIE_DOMAIN = 'gabriel-santos.up.railway.app'
+CSRF_COOKIE_DOMAIN = os.getenv('DOMAIN')
+SESSION_COOKIE_DOMAIN = os.getenv('DOMAIN')
 ROOT_URLCONF = 'Portfolio.urls'
 
 TEMPLATES = [
