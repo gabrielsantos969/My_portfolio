@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>HTML5 Background Video - Torre Eiffel - TutsUP</title>
+		
+		<style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100px;
+      }
+      .banner {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    
+        
+      }
+      .banner .video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        animation: entrada 5s linear;
+      }
+
+      .glow-on-hover {
+        width: 620px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: transparent;
+        cursor: default;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .1s;
+    }
+
+    .glow-on-hover:hover{
+      opacity: 1;
+      transition: all 10s;
+    }
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+
+    .glow-on-hover:active:after {
+        background: #000;
+    }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    .teste {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    .teste p {
+      font-size: 10px;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+
+    @keyframes entrada {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+		</style>
+		
+		
+	</head>
+
+	<body>
+		<div class="banner">
+      <video class="video" autoplay muted loop>
+          <source src="../../static/my_portfolio/img/videos/planeta-terra.mp4" type="video/mp4">
+      </video>
+      <div class="glow-on-hover">
+        <div class="teste">
+          <h4>Creator: Gabriel Santos</h4>
+          <h4>Created in: 22/03/2023</h4>
+          <p>Marcos 5:41 - "Talitha koum!" - Pode significar "Meu amor, levante-se!" - É o que Jesus fala 
+            para a menina, essa é a forma que ele nos trata, nós mortos em nossos pegados, ele nos pega pela 
+            mão como alguém que estava dormindo e trata com amor, mesmo nós a cada dia fazendo o que desagrada a ele 
+            o <b>PECADO</b>!
+          </p>
+        
+  
+        </div>
+
+      </div>
+  </div>	
+
+	</body>
+</html>
