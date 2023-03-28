@@ -1,0 +1,112 @@
+body{
+  background: linear-gradient(to bottom, rgb(100, 100, 100), rgb(0, 0, 50))
+}
+/* Classe da tela completa */
+.super-content {
+  justify-content: center;
+  text-align: center;
+  
+}
+.super-content h1{
+  font-family: 'Roboto Condensed', sans-serif;
+  cursor: default;
+  margin: 1rem;
+}
+
+
+/* Card de imagens */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} 
+
+.image-wrapper {
+  position: relative;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover .card-info {
+  opacity: 1;
+}
+
+.image-wrapper:hover {
+  transform: translateY(-10px);
+}
+
+/* Super card about */
+.super-card-about{
+  color: #fff;
+  background-image: linear-gradient(90deg, #9572AD 0%, #43E7AD 50.52%, #E2D45C 100%);
+  margin: 2rem 20rem 2rem 20rem;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+
+/* CSS do card about-me */
+.card-about-me {
+  background-color: #33303b;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 10px 5px 5px rgba(83, 83, 83, 0.5);
+}
+
+.card-about-me h2{
+  letter-spacing: -0.47px;
+  cursor: default;
+}
+.card-about-me p{
+  text-align: justify;
+  padding-top: 12px;
+  letter-spacing: -0.18px;
+  color: #A1A1AA;
+  cursor: default;
+}
+  
+/* Responsividade da pagina */
+
+@media (max-width: 768px) {
+
+  .back-button {
+    flex-direction: column;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+  }
+    
+
+  .image-wrapper {
+    flex-basis: calc(50% - 40px);
+  }
+
+  .super-card-about {
+    margin: 1rem 5rem 1rem 5rem;
+    flex-basis: calc(50% - 40px);
+  }
+
+
+}
