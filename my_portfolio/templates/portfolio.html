@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block 'header' %}
     <link rel="stylesheet" href="../../static/my_portfolio/css/portfolio.css">
-    <title>Portfolio Teste</title>
-</head>
-<body>
+    <link rel="stylesheet" href="../../static/my_portfolio/css/card-experience.css">
+{% endblock %}
+
+{% block content %}
     <div class="card-portfolio">
         <section id="about-me">
             <img class="banner-portfolio" src="../../static/my_portfolio/img/Banner Linkedin.png" alt="banner">
@@ -35,10 +36,61 @@
 
             
         </section>
+
+        <section id="experience" class="card-section">
+            <h2>Experiences</h2>
+            <div class="card-wrapper">
+                <a class="card" href="{% url 'certifications' %}#python" id="python" >
+                    <img src="{% static 'my_portfolio/img/pitao.png' %}" alt="python">
+                    <h3>Python</h3>
+                    <h4>Experience: 2+ years</h4>
+             
+                </a>
+                <a class="card" href="{% url 'certifications' %}#typescript" id="typescript">
+                    <img src="{% static 'my_portfolio/img/typescript.png' %}" alt="typescript">
+                    <h3>TypeScript</h3>
+                    <h4>Experience: 2+ years</h4>
+               
+                </a>
+                <a class="card" href="{% url 'certifications' %}#java" id="java">
+                    <img src="{% static 'my_portfolio/img/java.png' %}" alt="java">
+                    <h3>Java</h3>
+                    <h4>Experience: 1+ years</h4>
+                
+                </a>
+                <a class="card" href="{% url 'certifications' %}#javascript" id="javascript">
+                    <img src="{% static 'my_portfolio/img/js.png' %}" alt="javascript">
+                    <h3>JavaScript</h3>
+                    <h4>Experience: 2+ years</h4>
+                   
+                </a>
+                <a class="card" href="{% url 'certifications' %}#react" id="react">
+                    <img src="{% static 'my_portfolio/img/react.png' %}" alt="react">
+                    <h3>React</h3>
+                    <h4>Experience: 1+ years</h4>
+                   
+                </a>
+                <a class="card" href="{% url 'certifications' %}#html" id="html">
+                    <img src="{% static 'my_portfolio/img/html-5.png' %}" alt="html-5">
+                    <h3>HTML5</h3>
+                    <h4>Experience: 2+ years</h4>
+                
+                </a>
+                <a class="card" href="{% url 'certifications' %}#css" id="css">
+                    <img src="{% static 'my_portfolio/img/css-3.png' %}" alt="css-3">
+                    <h3>CSS3</h3>
+                    <h4>Experience: 2+ years</h4>
+                    
+                </a>
+                <a class="card" href="{% url 'certifications' %}#sql" id="sql">
+                    <img src="{% static 'my_portfolio/img/sql.png' %}" alt="sql">
+                    <h3>SQL</h3>
+                    <h4>Experience: 2+ years</h4>
+                    
+                </a>
+              
+            </div>
+        </section>
     </div>
-
-
-
     <script src="../../static/my_portfolio/js/portfolio.js"></script>
-</body>
-</html>
+{% endblock %}

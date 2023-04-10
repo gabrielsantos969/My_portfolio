@@ -10,7 +10,7 @@ def about(request):
     ctx = {
         'title': 'About Me'
     }
-    return render(request, 'about_me.html', ctx)
+    return render(request, 'portfolio.html', ctx)
 
 def certifications(request):
     ctx = {

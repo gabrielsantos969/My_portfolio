@@ -14,7 +14,7 @@
       <a class="back-button" href="{% url 'home' %}" >
         <span class="arrow-left"></span>
       </a>
-      <h1 class="title">About Me</h1>
+      <h1 class="title">Sobre Mim</h1>
   </div>
 
   <!-- Aqui fica os cards com os videos -->
@@ -24,8 +24,8 @@
         <source src="{% static 'my_portfolio/img/videos/programando.mp4' %}" type="video/mp4">
       </video>
       <div class="card-info">
-        <h2>Programmer:</h2>
-        <p>It opens a door to a new world with algorithms alone.</p>
+        <h2>Programar:</h2>
+        <p>Abre uma porta para um novo mundo apenas com algoritmos.</p>
       </div>
     </div>
         
@@ -34,8 +34,8 @@
         <source src="{% static 'my_portfolio/img/videos/amigos.mp4' %}" type="video/mp4">
       </video>
       <div class="card-info">
-        <h2>Friendships:</h2>
-        <p>It brings comfort and joy, something you can't buy.</p>
+        <h2>Amigos:</h2>
+        <p>Traz conforto e alegria, algo que você não pode comprar.</p>
       </div>
     </div>
     
@@ -44,8 +44,8 @@
         <source src="{% static 'my_portfolio/img/videos/viagens.mp4' %}" type="video/mp4">
       </video>
       <div class="card-info">
-        <h2>Travel:</h2>
-        <p>It brings a sense of freedom and will always be welcome.</p>
+        <h2>Viajar:</h2>
+        <p>Traz uma sensação de liberdade e será sempre bem-vinda.</p>
       </div>
     </div>
     
@@ -54,8 +54,8 @@
         <source src="{% static 'my_portfolio/img/videos/family.mp4' %}" type="video/mp4">
       </video>
       <div class="card-info">
-        <h2>Family:</h2>
-        <p>Family is learning about love in the most beautiful way possible.</p>
+        <h2>Família:</h2>
+        <p>Família é aprender sobre o amor da forma mais linda possível.</p>
       </div>
     </div>
   </div>
@@ -63,13 +63,16 @@
   <!-- Card com algumas informações -->
   <div class="super-card-about">
     <div class="card-about-me">
-      <h2>Olá, pessoal...</h2>
+      <h2>Olá, meu nome é Gabriel Santos...</h2>
       <p>
-        Meu nome é Gabriel Santos, tenho 21 anos e moro em Salvador-BA, atualmente faço bacharelado em Ciência da Computação e trabalho
-        como Analista de Sistemas, venho a cada dia buscando 
+        Tenho <span id="idade"></span> anos, sou desenvolvedor fullstack em Salvador-BA e faço bacharelado em Ciências da Computação.
+        <br><br>
+        Atualmente  trabalho como Analista técnico de sistemas e estou buscando me desenvolver ainda mais na área de tecnologia, aumentando meu conhecimento através de cursos online e bootcamps.
+        <br><br>
+        Comecei na área de tecnologia em 2020, logo após ter entrado no curso técnico em informática, em 2021 fui chamado para trabalhar na atual empresa que estou, ingressei na faculdade e continuo até hoje aumentando meus conhecimentos, sempre buscando me desenvolver ainda mais.
       </p>
     </div>
   </div>
-
+  <script src="../../static/my_portfolio/js/portfolio.js"></script>
 </div>
 {% endblock%}
