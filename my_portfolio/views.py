@@ -4,13 +4,8 @@ def index(request):
     ctx = {
         'title': 'Home'
     }
-    return render(request, 'sections_portfolio.html', ctx)
+    return render(request, 'portfolio.html', ctx)
 
-def about(request):
-    ctx = {
-        'title': 'About Me'
-    }
-    return render(request, 'about_me.html', ctx)
 
 def certifications(request):
     ctx = {

@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom,darkblue, black);
+    /* background: linear-gradient(to bottom,darkblue, black); */
   }
 
   .card-section h2{
@@ -32,11 +32,13 @@
     text-align: center;
     text-decoration: none;
     color: #000;
+    transition: 500ms ease-out;
   }
 
   .card:hover{
     box-shadow: 0px 0px 20px rgba(233, 233, 233, 0.856);
     transform: scale(1.03);
+    
   }
   
   .card img {
