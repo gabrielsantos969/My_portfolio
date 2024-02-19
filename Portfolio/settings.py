@@ -18,7 +18,7 @@ SECRET_KEY = 'l&3&%1=egy7x%76x9zp38iff2%a$85i4@2bqi^al-j*k))v1)d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.getenv('DOMAIN'), '127.0.0.1']
 
 
 # Application definition
